@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Telusko Spring Framework | peachpuff</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Telusko Spring Framework" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content=":point_right:1. Introduction to Spring – 00:05" />
+<meta property="og:description" content=":point_right:1. Introduction to Spring – 00:05" />
+<link rel="canonical" href="http://localhost:4000/spring/telusko/youtube-tutorial/2020/05/12/telusko-spring-framework.html" />
+<meta property="og:url" content="http://localhost:4000/spring/telusko/youtube-tutorial/2020/05/12/telusko-spring-framework.html" />
+<meta property="og:site_name" content="peachpuff" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-05-12T00:00:00+09:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","url":"http://localhost:4000/spring/telusko/youtube-tutorial/2020/05/12/telusko-spring-framework.html","headline":"Telusko Spring Framework","dateModified":"2020-05-12T00:00:00+09:00","datePublished":"2020-05-12T00:00:00+09:00","description":":point_right:1. Introduction to Spring – 00:05","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/spring/telusko/youtube-tutorial/2020/05/12/telusko-spring-framework.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="peachpuff" />
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper">
+<a class="site-title" rel="author" href="/">peachpuff</a> <img class="emoji" title=":peach:" alt=":peach:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f351.png" height="20" width="20"><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger">
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewbox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+<a class="page-link" href="/about/">About</a><a class="page-link" href="/categories/">Categories</a>
+</div>
+      </nav>
+</div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Telusko Spring Framework</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2020-05-12T00:00:00+09:00" itemprop="datePublished">
+        May 12, 2020
+      </time><img class="emoji" title=":smiley_cat:" alt=":smiley_cat:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f63a.png" height="20" width="20"> 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            spring
+          </span>, 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            telusko
+          </span>, 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            youtube-tutorial
+          </span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p><img class="emoji" title=":point_right:" alt=":point_right:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f449.png" height="20" width="20">1. Introduction to Spring – 00:05</p>
+
+<blockquote>
+  <p>스프링은 여러 모듈을 제공해준다.. 따라서 개발이 편리하다!</p>
+</blockquote>
+
+<p>why do we need SPRING?<br>
+spring provide various modules!</p>
+
+<blockquote>
+  <p>어떤 편리함이 있는가?</p>
+</blockquote>
+
+<ul>
+  <li>common issue: dependencies -&gt; spring provides IoC</li>
+  <li>web framework: MVC -&gt; spring has its own MVC module</li>
+  <li>connect to database -&gt; spring has its own database module</li>
+</ul>
+
+<p><br>
+<img class="emoji" title=":point_right:" alt=":point_right:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f449.png" height="20" width="20">2. What is Dependency Injection ? – 01:41</p>
+
+<blockquote>
+  <p>스프링의 특징(feature) 중 하나, Dependency Injection은 무엇이고 왜 필요한가?</p>
+</blockquote>
+
+<p>DI is a important design pattern concept..why?</p>
+<ul>
+  <li>we do not want our software to be <code class="language-plaintext highlighter-rouge">tightly coupled</code>
+</li>
+  <li>easier <code class="language-plaintext highlighter-rouge">unit testing</code>
+</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// new를 사용한 자바코드</span>
+<span class="kd">class</span> <span class="nc">Laptop</span> <span class="o">{</span>
+  <span class="nc">HardDrive</span> <span class="n">obj1</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HitachiHD</span><span class="o">();</span>
+  <span class="c1">//HitachiHD -&gt; samsungHD로 바꾸고 싶다면?  </span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>the moment you say <code class="language-plaintext highlighter-rouge">new</code>,<br>
+you are going for <code class="language-plaintext highlighter-rouge">tight coupling</code>..</p>
+
+<dl>
+  <dt>we use, <code class="language-plaintext highlighter-rouge">dependency injection spring container</code>
+</dt>
+  <dd>they create objects and inject those to my class.. <code class="language-plaintext highlighter-rouge">loose coupling btw objects!</code>
+</dd>
+</dl>
+
+<p>inject what to whome? mention it in <code class="language-plaintext highlighter-rouge">configuration file</code></p>
+<ul>
+  <li>xml file configuration(edit in the future, loose couple!)</li>
+  <li>spring boot: java configuration</li>
+</ul>
+
+<p><br>
+<img class="emoji" title=":point_right:" alt=":point_right:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f449.png" height="20" width="20">3. Introduction to Maven  – 09:46<br>
+<img class="emoji" title=":point_right:" alt=":point_right:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f449.png" height="20" width="20">4. Maven Practical – 17:13</p>
+
+<blockquote>
+  <p>메이븐은 개발에 필요한 다양한 라이브러리들을 다운받고 관리하는 역할을 한다</p>
+</blockquote>
+
+<p>Maven is..</p>
+<ul>
+  <li>build tool(compile my file)</li>
+  <li>dependency management</li>
+  <li>getting those jar files I need</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">"Hey! maven Repository, I want this dependency!"</code><br>
+specify it here <code class="language-plaintext highlighter-rouge">pom.xml</code></p>
+
+<p>go to <code class="language-plaintext highlighter-rouge">mvnrepository.com  </code><br>
+and search for library you want!</p>
+
+<p>whenever working with MAVEN,  <br>
+make sure the <code class="language-plaintext highlighter-rouge">internet connection!  </code></p>
+
+<p>Local Repository(my pc) &amp; Remote Repository</p>
+
+<p><br>
+<img class="emoji" title=":point_right:" alt=":point_right:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f449.png" height="20" width="20">5. ApplicationContext – 29:04
+<img class="emoji" title=":point_right:" alt=":point_right:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f449.png" height="20" width="20">6. Spring.xml – 41:39</p>
+
+<blockquote>
+  <p>스프링의 DI 덕분에..<br>
+자바 코딩으로는 비즈니스 로직을 구현하는데에만 집중할 수 있다.</p>
+</blockquote>
+
+<p>나중에 세부적인 내용(예를들어, vehicle을 car로 할 것인지 bike로 할 것인지와 같은)을 수정할 일이 있다면 자바코드는 그대로두고,<br>
+설정문서(configuration file)만 수정하면 된다.<br>
+즉 DI 덕분에 코드를 re-compile할 일이 줄어들고<br>
+object들간의 tight coupling문제를 해결할 수 있었다!</p>
+
+<ul>
+  <li>Vehicle.java (interface)</li>
+  <li>Car.java (class)</li>
+  <li>Bike.java (class)</li>
+  <li>App.java (main class)</li>
+  <li>spring.xml (vehicle object을 생성하고 App.java에 inject한다)</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">App</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">ApplicationContext</span> <span class="n">context</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ClassPathXmlApplicationContext</span><span class="o">(</span><span class="s">"spring.xml"</span><span class="o">);</span>
+
+    <span class="nc">Vehicle</span> <span class="n">obj</span> <span class="o">=</span> <span class="o">(</span><span class="nc">Vehicle</span><span class="o">)</span><span class="n">context</span><span class="o">.</span><span class="na">getBean</span><span class="o">(</span><span class="s">"vehicle"</span><span class="o">);</span>
+    <span class="c1">//where this 'vehicle' keword come from? - spring.xml</span>
+    <span class="n">obj</span><span class="o">.</span><span class="na">drive</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>App.java에서 사용한 <code class="language-plaintext highlighter-rouge">vehicle이란 bean은 어디서 온것인가?</code>
+spring.xml파일에서 vehicle이란 id를 가진 bean이 준비되어있다!
+또한 <code class="language-plaintext highlighter-rouge">그 vehicle이란 id를 가진 bean의 진짜 존재는 class</code>에 적혀있다</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;beans&gt;</span>
+  <span class="c">&lt;!-- class=[from which class we wnana create this bean] --&gt;</span>
+  <span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"vehicle"</span> <span class="na">class=</span><span class="s">"com.navin.Telusko.Bike"</span><span class="nt">&gt;&lt;/bean&gt;</span>
+  <span class="c">&lt;!-- specify what vehicle you want here! --&gt;</span>
+<span class="nt">&lt;/beans&gt;</span>
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// abstraction - create interface</span>
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Vehicle</span> <span class="o">{</span>
+  <span class="kt">void</span> <span class="nf">drive</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Car</span> <span class="kd">implements</span> <span class="nc">Vehicle</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">drive</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"부릉부릉"</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Bike</span> <span class="kd">implements</span> <span class="nc">Vehicle</span><span class="o">{</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">drive</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"따릉따릉"</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p><br><br></p>
+
+<blockquote>
+  <p>자바 클래스를 @Component화 해서 App.java메인코드에서 new를 사용하지 않는 방법도 있다.</p>
+</blockquote>
+
+<p>이때는 xml 설정파일에(context:componenet-scan tag) 어떤 패키지에 있는 클래스들이 @Component화 되어 사용될 것인지를 명시해주어야 한다.</p>
+
+<p><img class="emoji" title=":point_right:" alt=":point_right:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f449.png" height="20" width="20">7. Annotation Based Configuration – 45:59</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">App</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">ApplicationContext</span> <span class="n">context</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ClassPathXmlApplicationContext</span><span class="o">(</span><span class="s">"spring.xml"</span><span class="o">);</span>
+
+    <span class="nc">Vehicle</span> <span class="n">obj</span> <span class="o">=</span> <span class="o">(</span><span class="nc">Vehicle</span><span class="o">)</span><span class="n">context</span><span class="o">.</span><span class="na">getBean</span><span class="o">(</span><span class="s">"car"</span><span class="o">);</span> <span class="c1">// specify what vehicle you want here!</span>
+    <span class="n">obj</span><span class="o">.</span><span class="na">drive</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Component</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Car</span> <span class="kd">implements</span> <span class="nc">Vehicle</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">drive</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"부릉부릉"</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- spring.xml --&gt;</span>
+<span class="nt">&lt;beans&gt;</span>
+  <span class="nt">&lt;context:component-scan</span> <span class="na">base-package=</span><span class="s">"com.navin.Telusko"</span><span class="nt">&gt;&lt;/context:component-scan&gt;</span>
+  <span class="c">&lt;!-- &lt;bean id="vehicle" class="com.navin.Telusko.Bike"&gt;&lt;/bean&gt; --&gt;</span>
+<span class="nt">&lt;/beans&gt;</span>
+</code></pre></div></div>
+
+<p><br></p>
+<blockquote>
+  <p>bean으로 등록시킨 클래스의 변수는 property태그로 설정한다</p>
+</blockquote>
+
+<p><img class="emoji" title=":point_right:" alt=":point_right:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f449.png" height="20" width="20">8. Bean Property – 52:25</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Tyre</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="nc">String</span> <span class="n">brand</span><span class="o">;</span>
+
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getBrand</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">brand</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setBrand</span><span class="o">(</span><span class="nc">String</span> <span class="n">brand</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">brand</span> <span class="o">=</span> <span class="n">brand</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="s">"Tyre [brand=]"</span> <span class="o">+</span> <span class="n">brand</span> <span class="o">+</span> <span class="s">"]"</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">App</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">ApplicationContext</span> <span class="n">context</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ClassPathXmlApplicationContext</span><span class="o">(</span><span class="s">"spring.xml"</span><span class="o">);</span>
+
+    <span class="nc">Tyre</span> <span class="n">t</span> <span class="o">=</span> <span class="o">(</span><span class="nc">Tyre</span><span class="o">)</span> <span class="n">context</span><span class="o">.</span><span class="na">getBean</span><span class="o">(</span><span class="s">"tyre"</span><span class="o">);</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">t</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- spring.xml --&gt;</span>
+<span class="nt">&lt;beans</span> <span class="err">[custom</span> <span class="err">tags</span> <span class="err">definition]</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;context:component-scan</span> <span class="na">base-package=</span><span class="s">"com.navin.Telusko"</span><span class="nt">&gt;&lt;/context:component-scan&gt;</span>
+  <span class="c">&lt;!-- &lt;bean id="vehicle" class="com.navin.Telusko.Bike"&gt;&lt;/bean&gt; --&gt;</span>
+
+  <span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"tyre"</span> <span class="na">class=</span><span class="s">"com.navin.Telusko.Tyre"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"brand"</span> <span class="na">value=</span><span class="s">"MRF"</span><span class="nt">&gt;&lt;/property&gt;</span>
+  <span class="nt">&lt;/bean&gt;</span>
+<span class="nt">&lt;/beans&gt;</span>
+</code></pre></div></div>
+
+<p><br></p>
+<blockquote>
+  <p>propert태그 사용 대신 constructor-arg태그를 활용해서.. 클래스가 가진 변수값을 설정할 수도 있다!</p>
+</blockquote>
+
+<p><img class="emoji" title=":point_right:" alt=":point_right:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f449.png" height="20" width="20">9. Constructor Injection – 57:29
+we can assign value using <code class="language-plaintext highlighter-rouge">setter injection(Bean property tag)</code>
+or using <code class="language-plaintext highlighter-rouge">Constructor injection(constructor-arg tag)</code></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Tyre</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="nc">String</span> <span class="n">brand</span><span class="o">;</span>
+
+  <span class="c1">//how to set variable brand? - Constructor injection</span>
+  <span class="kd">public</span> <span class="nf">Tyre</span><span class="o">(</span><span class="nc">String</span> <span class="n">brand</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">super</span><span class="o">();</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">brand</span> <span class="o">=</span> <span class="n">brand</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getBrand</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">brand</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="c1">//how to set variable brand? - setter injection</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setBrand</span><span class="o">(</span><span class="nc">String</span> <span class="n">brand</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">brand</span> <span class="o">=</span> <span class="n">brand</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="s">"Tyre [brand=]"</span> <span class="o">+</span> <span class="n">brand</span> <span class="o">+</span> <span class="s">"]"</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- spring.xml --&gt;</span>
+<span class="nt">&lt;beans</span> <span class="err">[custom</span> <span class="err">tags</span> <span class="err">definition]</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;context:component-scan</span> <span class="na">base-package=</span><span class="s">"com.navin.Telusko"</span><span class="nt">&gt;&lt;/context:component-scan&gt;</span>
+  <span class="c">&lt;!-- &lt;bean id="vehicle" class="com.navin.Telusko.Bike"&gt;&lt;/bean&gt; --&gt;</span>
+
+  <span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"tyre"</span> <span class="na">class=</span><span class="s">"com.navin.Telusko.Tyre"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- &lt;property name="brand" value="MRF"&gt;&lt;/property&gt; --&gt;</span>
+    <span class="nt">&lt;constructor-arg</span> <span class="na">value=</span><span class="s">"MRF"</span><span class="nt">&gt;&lt;/constructor-arg&gt;</span>
+  <span class="nt">&lt;/bean&gt;</span>
+<span class="nt">&lt;/beans&gt;</span>
+</code></pre></div></div>
+
+<p><br></p>
+<blockquote>
+  <p>Car bean이 Tyre bean을 자바코드상에서 사용해야 한다면..<br>
+@Autowired 어노테이션으로 Tyre bean을 연결시켜 주어야 한다</p>
+</blockquote>
+
+<p><img class="emoji" title=":point_right:" alt=":point_right:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f449.png" height="20" width="20">10. Autowired Annotation – 59:52</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">App</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">ApplicationContext</span> <span class="n">context</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ClassPathXmlApplicationContext</span><span class="o">(</span><span class="s">"spring.xml"</span><span class="o">);</span>
+
+    <span class="nc">Car</span> <span class="n">obj</span> <span class="o">=</span> <span class="o">(</span><span class="nc">Car</span><span class="o">)</span><span class="n">context</span><span class="o">.</span><span class="na">getBean</span><span class="o">(</span><span class="s">"car"</span><span class="o">);</span> <span class="c1">//@Component</span>
+    <span class="n">obj</span><span class="o">.</span><span class="na">drive</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Component</span> <span class="c1">//Annotation based configuration</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Car</span> <span class="kd">implements</span> <span class="nc">Vehicle</span> <span class="o">{</span>
+  <span class="nd">@Autowired</span> <span class="c1">//Annotation based configuration</span>
+  <span class="kd">private</span> <span class="nc">Tyre</span> <span class="n">tyre</span><span class="o">;</span>
+
+  <span class="kd">public</span> <span class="nc">Tyre</span> <span class="nf">getTyre</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">tyre</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setTyre</span><span class="o">(</span><span class="nc">Tyre</span> <span class="n">tyre</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">tyre</span> <span class="o">=</span> <span class="n">tyre</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">drive</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"car &gt;"</span> <span class="o">+</span> <span class="n">tyre</span><span class="o">);</span> <span class="c1">// "car &gt;Tyre..It's working.."</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- spring.xml --&gt;</span>
+<span class="nt">&lt;beans</span> <span class="err">[custom</span> <span class="err">tags</span> <span class="err">definition]</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;context:component-scan</span> <span class="na">base-package=</span><span class="s">"com.navin.Telusko"</span><span class="nt">&gt;&lt;/context:component-scan&gt;</span>
+
+  <span class="c">&lt;!-- in this exmaple
+  no xml based configuration is used --&gt;</span>
+<span class="nt">&lt;/beans&gt;</span>
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Component</span> <span class="c1">//Annotation based configuration</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Tyre</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="nc">String</span> <span class="n">brand</span><span class="o">;</span>
+
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getBrand</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">brand</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setBrand</span><span class="o">(</span><span class="nc">String</span> <span class="n">brand</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">brand</span> <span class="o">=</span> <span class="n">brand</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="s">"Tyre..It's working.."</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><br><br><br></p>
+<blockquote>
+  <p>xml-based configuration vs. java-based configuration</p>
+</blockquote>
+
+<p><img class="emoji" title=":point_right:" alt=":point_right:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f449.png" height="20" width="20">11. Configuration &amp; Bean – 01:05:36</p>
+
+<p>xml-based configuration</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- spring.xml --&gt;</span>
+<span class="nt">&lt;beans&gt;</span>
+  <span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"phone"</span> <span class="na">class=</span><span class="s">"mypackage.Samsung"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"cpu"</span> <span class="na">class=</span><span class="s">"mypackage.Snapdragon"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/beans&gt;</span>
+</code></pre></div></div>
+<p><br>
+java-based configuration</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// AppConfig.java</span>
+<span class="nd">@Configuration</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">AppConfig</span> <span class="o">{</span>
+  <span class="nd">@Bean</span>
+  <span class="kd">public</span> <span class="nc">Samsung</span> <span class="nf">getPhone</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">Samsung</span><span class="o">();</span> <span class="c1">//from Samsung class</span>
+  <span class="o">}</span>
+
+  <span class="nd">@Bean</span>
+  <span class="kd">public</span> <span class="nc">MobileProcessor</span> <span class="nf">getProcessor</span><span class="o">(){</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">Snapdragon</span><span class="o">();</span> <span class="c1">// from MobileProcessor class</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p><br>
+<img class="emoji" title=":point_right:" alt=":point_right:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f449.png" height="20" width="20">12. Annotation Component AutoWired Primary Qualifier – 01:21:28</p>
+
+<p>java-based configuration</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// AppConfig.java</span>
+<span class="nd">@Configuration</span>
+<span class="nd">@ComponentScan</span><span class="o">(</span><span class="n">basePackages</span><span class="o">=</span><span class="s">"[package-name-which-have-all-the-classes]"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">AppConfig</span> <span class="o">{</span>
+  <span class="c1">//instead of @Bean tags..</span>
+  <span class="c1">//add @Component code to every class you're going to use</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>peachpuff에 업로드<br>
+telusko에게 블로그에 정리한 글 괜찮은지 물어보기</p>
+
+  </div>
+<a class="u-url" href="/spring/telusko/youtube-tutorial/2020/05/12/telusko-spring-framework.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+    <div class="social-links">
+<ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

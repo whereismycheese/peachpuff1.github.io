@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Selectors | peachpuff</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Selectors" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content=":point_right: 시작요소 를 선택해서 이것저것 시키고 싶다! :point_right: 시작요소에서 시작해서 tree관계에 따른 다른 요소를 찾는 방법?" />
+<meta property="og:description" content=":point_right: 시작요소 를 선택해서 이것저것 시키고 싶다! :point_right: 시작요소에서 시작해서 tree관계에 따른 다른 요소를 찾는 방법?" />
+<link rel="canonical" href="http://localhost:4000/jquery/selectors/2020/05/06/selectors.html" />
+<meta property="og:url" content="http://localhost:4000/jquery/selectors/2020/05/06/selectors.html" />
+<meta property="og:site_name" content="peachpuff" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-05-06T00:00:00+09:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","url":"http://localhost:4000/jquery/selectors/2020/05/06/selectors.html","headline":"Selectors","dateModified":"2020-05-06T00:00:00+09:00","datePublished":"2020-05-06T00:00:00+09:00","description":":point_right: 시작요소 를 선택해서 이것저것 시키고 싶다! :point_right: 시작요소에서 시작해서 tree관계에 따른 다른 요소를 찾는 방법?","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/jquery/selectors/2020/05/06/selectors.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="peachpuff" />
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper">
+<a class="site-title" rel="author" href="/">peachpuff</a> <img class="emoji" title=":peach:" alt=":peach:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f351.png" height="20" width="20"><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger">
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewbox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+<a class="page-link" href="/about/">About</a><a class="page-link" href="/categories/">Categories</a>
+</div>
+      </nav>
+</div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Selectors</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2020-05-06T00:00:00+09:00" itemprop="datePublished">
+        May 6, 2020
+      </time><img class="emoji" title=":smiley_cat:" alt=":smiley_cat:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f63a.png" height="20" width="20"> 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            jquery
+          </span>, 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            selectors
+          </span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p><img class="emoji" title=":point_right:" alt=":point_right:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f449.png" height="20" width="20"> <code class="language-plaintext highlighter-rouge">시작요소</code> 를 선택해서 이것저것 시키고 싶다!<br>
+<img class="emoji" title=":point_right:" alt=":point_right:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f449.png" height="20" width="20"> 시작요소에서 시작해서 <a href="/jquery/tree-traversal/2020/05/06/tree-traversal-methods.html">tree관계</a>에 따른 다른 요소를 찾는 방법?</p>
+
+<p><img class="emoji" title=":sparkles:" alt=":sparkles:" src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png" height="20" width="20">몇번째인 특정요소를 찾는다<br>
+<img class="emoji" title=":sparkles:" alt=":sparkles:" src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png" height="20" width="20">누구의 이런자식을 찾는다<br>
+<img class="emoji" title=":sparkles:" alt=":sparkles:" src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png" height="20" width="20">이런특징을 가진 요소를 찾는다<br>
+<img class="emoji" title=":sparkles:" alt=":sparkles:" src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png" height="20" width="20">[이런attribute]을 가지거나 안가지거나 부분적으로 가진 요소를 찾는다<br>
+<img class="emoji" title=":sparkles:" alt=":sparkles:" src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png" height="20" width="20"> 이런특징을 가진 input요소를 찾는다</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>selectors</th>
+      <th style="text-align: center">example code</th>
+      <th style="text-align: center">
+<img class="emoji" title=":point_right:" alt=":point_right:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f449.png" height="20" width="20">누구를 찾는가</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>*</td>
+      <td style="text-align: center">$(“*”)</td>
+      <td style="text-align: center">All elements</td>
+    </tr>
+    <tr>
+      <td>#id</td>
+      <td style="text-align: center">$(“#lastname”)</td>
+      <td style="text-align: center">The element with id=”lastname”</td>
+    </tr>
+    <tr>
+      <td>.class</td>
+      <td style="text-align: center">$(“.intro”)</td>
+      <td style="text-align: center">All elements with class=”intro”</td>
+    </tr>
+    <tr>
+      <td>.class,.class</td>
+      <td style="text-align: center">$(“.intro,.demo”)</td>
+      <td style="text-align: center">All elements with the class “intro” or “demo”</td>
+    </tr>
+    <tr>
+      <td>element</td>
+      <td style="text-align: center">$(“p”)</td>
+      <td style="text-align: center">All &lt;p&gt; elements</td>
+    </tr>
+    <tr>
+      <td>el1,el2,el3</td>
+      <td style="text-align: center">$(“h1,div,p”)</td>
+      <td style="text-align: center">All &lt;h1&gt;, &lt;div&gt; and &lt;p&gt; elements</td>
+    </tr>
+    <tr>
+      <td>
+<img class="emoji" title=":sparkles:" alt=":sparkles:" src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png" height="20" width="20">몇번째인 특정요소를 찾는다</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+      <td>:first</td>
+      <td style="text-align: center">$(“p:first”)</td>
+      <td style="text-align: center">The first &lt;p&gt; element</td>
+    </tr>
+    <tr>
+      <td>:last</td>
+      <td style="text-align: center">$(“p:last”)</td>
+      <td style="text-align: center">The last &lt;p&gt; element</td>
+    </tr>
+    <tr>
+      <td>:even</td>
+      <td style="text-align: center">$(“tr:even”)</td>
+      <td style="text-align: center">All even &lt;tr&gt; elements</td>
+    </tr>
+    <tr>
+      <td>:odd</td>
+      <td style="text-align: center">$(“tr:odd”)</td>
+      <td style="text-align: center">All odd &lt;tr&gt; elements</td>
+    </tr>
+    <tr>
+      <td>
+<img class="emoji" title=":sparkles:" alt=":sparkles:" src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png" height="20" width="20">누구의 이런자식을 찾는다</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+      <td>parent &gt; child</td>
+      <td style="text-align: center">$(“div &gt; p”)</td>
+      <td style="text-align: center">All &lt;p&gt; elements that are a direct child of a &lt;div&gt; element</td>
+    </tr>
+    <tr>
+      <td>parent descendant</td>
+      <td style="text-align: center">$(“div p”)</td>
+      <td style="text-align: center">All &lt;p&gt; elements that are descendants of a &lt;div&gt; element</td>
+    </tr>
+    <tr>
+      <td>
+<img class="emoji" title=":sparkles:" alt=":sparkles:" src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png" height="20" width="20">이런특징을 가진 요소를 찾는다</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+      <td>:eq(index)</td>
+      <td style="text-align: center">$(“ul li:eq(3)”)</td>
+      <td style="text-align: center">The fourth element in a list (index starts at 0)</td>
+    </tr>
+    <tr>
+      <td>:not(selector)</td>
+      <td style="text-align: center">$(“input:not(:empty)”)</td>
+      <td style="text-align: center">All input elements that are not empty</td>
+    </tr>
+    <tr>
+      <td>:contains(text)</td>
+      <td style="text-align: center">$(“:contains(‘Hello’)”)</td>
+      <td style="text-align: center">All elements which contains the text “Hello”</td>
+    </tr>
+    <tr>
+      <td>:has(selector)</td>
+      <td style="text-align: center">$(“div:has(p)”)</td>
+      <td style="text-align: center">All &lt;div&gt; elements that have a &lt;p&gt; element</td>
+    </tr>
+    <tr>
+      <td>:hidden</td>
+      <td style="text-align: center">$(“p:hidden”)</td>
+      <td style="text-align: center">All hidden &lt;p&gt; elements</td>
+    </tr>
+    <tr>
+      <td>:visible</td>
+      <td style="text-align: center">$(“table:visible”)</td>
+      <td style="text-align: center">All visible tables</td>
+    </tr>
+    <tr>
+      <td>
+<img class="emoji" title=":sparkles:" alt=":sparkles:" src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png" height="20" width="20">[이런 attribute]을 가지거나 안가지거나 부분적으로 가진 요소를 찾는다</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+      <td>[attribute]</td>
+      <td style="text-align: center">$(“[href]”)</td>
+      <td style="text-align: center">All elements with a href attribute</td>
+    </tr>
+    <tr>
+      <td>[attribute=value]</td>
+      <td style="text-align: center">$(“[href=’default.htm’]”)</td>
+      <td style="text-align: center">All elements with a href attribute value equal to “default.htm”</td>
+    </tr>
+    <tr>
+      <td>[attribute!=value]</td>
+      <td style="text-align: center">$(“[href!=’default.htm’]”)</td>
+      <td style="text-align: center">All elements with a href attribute value not equal to “default.htm”</td>
+    </tr>
+    <tr>
+      <td>[attribute$=value]</td>
+      <td style="text-align: center">$(“[href$=’.jpg’]”)</td>
+      <td style="text-align: center">All elements with a href attribute value ending with “.jpg”</td>
+    </tr>
+    <tr>
+      <td>[attribute^=value]</td>
+      <td style="text-align: center">$(“[title^=’Tom’]”)</td>
+      <td style="text-align: center">All elements with a title attribute value starting with “Tom”</td>
+    </tr>
+    <tr>
+      <td>[attribute~=value]</td>
+      <td style="text-align: center">$(“[title~=’hello’]”)</td>
+      <td style="text-align: center">All elements with a title attribute value containing the specific word “hello”</td>
+    </tr>
+    <tr>
+      <td>[attribute*=value]</td>
+      <td style="text-align: center">$(“[title*=’hello’]”)</td>
+      <td style="text-align: center">All elements with a title attribute value containing the word “hello”</td>
+    </tr>
+    <tr>
+      <td>
+<img class="emoji" title=":sparkles:" alt=":sparkles:" src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png" height="20" width="20"> 이런 특징을 가진 input요소를 찾는다</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+      <td>:input</td>
+      <td style="text-align: center">$(“:input”)</td>
+      <td style="text-align: center">All input elements</td>
+    </tr>
+    <tr>
+      <td>:text</td>
+      <td style="text-align: center">$(“:text”)</td>
+      <td style="text-align: center">All input elements with type=”text”</td>
+    </tr>
+    <tr>
+      <td>:password</td>
+      <td style="text-align: center">$(“:password”)</td>
+      <td style="text-align: center">All input elements with type=”password”</td>
+    </tr>
+    <tr>
+      <td>:radio</td>
+      <td style="text-align: center">$(“:radio”)</td>
+      <td style="text-align: center">All input elements with type=”radio”</td>
+    </tr>
+    <tr>
+      <td>:checkbox</td>
+      <td style="text-align: center">$(“:checkbox”)</td>
+      <td style="text-align: center">All input elements with type=”checkbox”</td>
+    </tr>
+    <tr>
+      <td>:submit</td>
+      <td style="text-align: center">$(“:submit”)</td>
+      <td style="text-align: center">All input elements with type=”submit”</td>
+    </tr>
+    <tr>
+      <td>:reset</td>
+      <td style="text-align: center">$(“:reset”)</td>
+      <td style="text-align: center">All input elements with type=”reset”</td>
+    </tr>
+    <tr>
+      <td>:button</td>
+      <td style="text-align: center">$(“:button”)</td>
+      <td style="text-align: center">All input elements with type=”button”</td>
+    </tr>
+    <tr>
+      <td>:image</td>
+      <td style="text-align: center">$(“:image”)</td>
+      <td style="text-align: center">All input elements with type=”image”</td>
+    </tr>
+    <tr>
+      <td>:file</td>
+      <td style="text-align: center">$(“:file”)</td>
+      <td style="text-align: center">All input elements with type=”file”</td>
+    </tr>
+    <tr>
+      <td>:enabled</td>
+      <td style="text-align: center">$(“:enabled”)</td>
+      <td style="text-align: center">All enabled input elements</td>
+    </tr>
+    <tr>
+      <td>:disabled</td>
+      <td style="text-align: center">$(“:disabled”)</td>
+      <td style="text-align: center">All disabled input elements</td>
+    </tr>
+    <tr>
+      <td>:selected</td>
+      <td style="text-align: center">$(“:selected”)</td>
+      <td style="text-align: center">All selected input elements</td>
+    </tr>
+    <tr>
+      <td>:checked</td>
+      <td style="text-align: center">$(“:checked”)</td>
+      <td style="text-align: center">All checked input elements</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+<a class="u-url" href="/jquery/selectors/2020/05/06/selectors.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+    <div class="social-links">
+<ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
